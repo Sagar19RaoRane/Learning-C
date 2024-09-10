@@ -1,6 +1,5 @@
 # How do I modify a pointer that has been passed into a function in C?
 
-
 '''
  #include<stdio.h>
 #include<stdlib.h>
@@ -22,9 +21,10 @@ typedef struct BarList
 void barPush(BarList ** list,Bar * bar)
 {
     // if there is no move to add, then we are done
-    if (bar == NULL) return;//EMPTY_LIST;
+    if (bar == NULL) return;
+    
 
-    // allocate space for the new node
+     allocate space for the new node
     BarList * newNode = malloc(sizeof(BarList));
 
     // assign the right values
@@ -44,6 +44,5 @@ l = EMPTY_LIST;
 barPush(&l,&b1); // b1 and b2 are just Bar's
 barPush(&l,&b2);
   return 0;
-
 
 '''
